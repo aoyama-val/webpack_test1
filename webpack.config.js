@@ -12,6 +12,7 @@ module.exports = {
     },
     plugins: [
         new webpack.ResolverPlugin(
+            // bower_components/jquery/bower.jsonからmainの部分を読み込むようにする
             new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
         ),
         //new webpack.optimize.UglifyJsPlugin()  // minify
